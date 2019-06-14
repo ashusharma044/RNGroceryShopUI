@@ -1,4 +1,5 @@
 export const img = {
+  userImg: require('./Images/ProfileImg.png'),
   slider1: require('./Images/banner_01.png'),
   slider2: require('./Images/banner_2.png'),
   photo_1: require('./Images/photo_1.png'),

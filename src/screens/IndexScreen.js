@@ -16,6 +16,7 @@ import Subscribe from './Subscribe';
 import Notification from './Notification';
 import Menu from './Menu';
 import CustomIcon from '../component/CustomIcon';
+import CustomHeader from '../component/CustomHeader';
 const TabNavigator = createBottomTabNavigator(
   {
     Home: {
@@ -81,37 +82,38 @@ const AppNavigator = createStackNavigator({
   tab: {
     screen: TabNavigator,
     navigationOptions: () => ({
-      headerMode: 'screen',
-      headerTintColor: '#555',
-      style: {
-        backgroundColor: 'lightgrey'
-      },
-      headerLeft: <CustomIcon name='location' size={25} color={'#000'} />,
-      headerLeftContainerStyle: {
-        opacity: 0.5,
-        marginLeft: 10
-      },
-      title: 'REGISTRATION',
-      headerTitleStyle: { textAlign: 'center', alignSelf: 'center' },
-      headerStyle: {
-        backgroundColor: 'white'
-      },
-      cardStyle: {
-        backgroundColor: 'transparent'
-      },
-      headerRight: (
-        <Icon.Button
-          name='search'
-          backgroundColor='rgba(52, 52, 52, 0)'
-          color='#000'
-          onPress={() => alert('This is search!')}
-        />
-      ),
-      headerRightContainerStyle: {
-        opacity: 0.5,
-        marginRight: 10
-      },
-      headerBackTitle: null
+      header: <CustomHeader />
+      // headerMode: 'screen',
+      // headerTintColor: '#555',
+      // style: {
+      //   backgroundColor: 'lightgrey'
+      // },
+      // headerLeft: <CustomIcon name='location' size={25} color={'#000'} />,
+      // headerLeftContainerStyle: {
+      //   opacity: 0.5,
+      //   marginLeft: 10
+      // },
+      // title: 'REGISTRATION',
+      // headerTitleStyle: { textAlign: 'center', alignSelf: 'center' },
+      // headerStyle: {
+      //   backgroundColor: 'white'
+      // },
+      // cardStyle: {
+      //   backgroundColor: 'transparent'
+      // },
+      // headerRight: (
+      //   <Icon.Button
+      //     name='search'
+      //     backgroundColor='rgba(52, 52, 52, 0)'
+      //     color='#000'
+      //     onPress={() => alert('This is search!')}
+      //   />
+      // ),
+      // headerRightContainerStyle: {
+      //   opacity: 0.5,
+      //   marginRight: 10
+      // },
+      // headerBackTitle: null
     })
   }
 });
