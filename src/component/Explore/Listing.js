@@ -9,7 +9,8 @@ import {
 } from 'react-native';
 const screenWidth = Math.round(Dimensions.get('window').width);
 const screenHeight = Math.round(Dimensions.get('window').height);
-export default class category extends Component {
+
+export default class Listing extends Component {
   render() {
     return (
       <View
@@ -21,10 +22,26 @@ export default class category extends Component {
           <View style={styles.imgWrapper}>
             <Image source={this.props.imageUri} style={styles.imgCls} />
           </View>
-          <Text style={[styles.textWrapper, { color: '#000' }]}>
+          <Text
+            style={[
+              styles.textWrapper,
+              {
+                color: '#000',
+                fontWeight: 'bold'
+              }
+            ]}
+          >
             {this.props.title}
           </Text>
-          <Text style={[styles.textWrapper, { color: '#666666' }]}>
+          <Text
+            style={[
+              styles.textWrapper,
+              {
+                color: '#666666',
+                marginVertical: 5
+              }
+            ]}
+          >
             ₹{this.props.price}
           </Text>
           <View style={styles.btnsWrapper}>
@@ -46,6 +63,7 @@ export default class category extends Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -56,12 +74,10 @@ const styles = StyleSheet.create({
     //padding: 20,
     //margin: 5,
     marginBottom: 20,
-    width: screenWidth - 130,
-    height: screenHeight - 550,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
     overflow: 'hidden'
   },
   imgWrapper: {
@@ -80,8 +96,8 @@ const styles = StyleSheet.create({
   imgCls: {
     flex: 1,
     resizeMode: 'cover',
-    width: screenWidth - 150,
-    height: screenHeight - 550
+    width: screenWidth / 2,
+    height: screenHeight / 4
   },
   btnsWrapper: {
     flex: 1,
@@ -97,7 +113,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 50
+    paddingVertical: 10
   },
   btnText: {
     color: '#fff',
@@ -106,7 +122,6 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     paddingLeft: 10,
-    fontSize: 18,
-    fontWeight: 'bold'
+    fontSize: 18
   }
 });

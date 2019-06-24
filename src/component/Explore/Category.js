@@ -14,8 +14,9 @@ export default class category extends Component {
     return (
       <View
         style={{
-          width: screenWidth,
-          height: screenHeight - 600,
+          flex: 1,
+          marginHorizontal: 10,
+          marginVertical: 10,
           shadowColor: '#000',
           alignItems: 'center',
           justifyContent: 'center',
@@ -32,7 +33,7 @@ export default class category extends Component {
         <View
           style={{
             width: screenWidth - 40,
-            height: screenHeight - 620,
+            height: screenHeight / 4,
             borderBottomLeftRadius: 10,
             borderBottomRightRadius: 10,
             borderTopLeftRadius: 10,

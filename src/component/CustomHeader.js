@@ -108,7 +108,7 @@ export default class CustomHeader extends Component {
                 paddingTop: 10,
                 paddingRight: 10,
                 paddingBottom: 10,
-                paddingLeft: 0,
+                paddingLeft: 10,
                 backgroundColor: '#fff',
                 color: '#424242'
               }}
@@ -119,7 +119,9 @@ export default class CustomHeader extends Component {
               }}
               underlineColorAndroid='transparent'
             />
-            <CustomIcon name='menu' size={18} color={'#009393'} />
+            <TouchableOpacity onPress={() => alert('menu clicked')}>
+              <CustomIcon name='menu' size={18} color={'#009393'} />
+            </TouchableOpacity>
           </View>
         </View>
       </SafeAreaView>
